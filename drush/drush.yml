@@ -1,0 +1,7 @@
+drush:
+  paths:
+    config: /var/www/html/drush/local/drush.yml
+
+options:
+  root: /var/www/html/web
+  uri: '${env.DRUSH_BASE_URI}'
