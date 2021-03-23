@@ -35,7 +35,7 @@
         "drupal/core-composer-scaffold": "^9.1.4",
         "drupal/core-project-message": "^9.1.4",
         "drupal/core-recommended": "^9.1.4",
-        "drupal/damopen": "^1.0.0",
+        "brainsum/damopen": "^1.0.0",
         "drupal/exception_mailer": "^3.0@beta",
         "drupal/maillog": "^1.0@beta",
         "drush/drush": "^10.3.6",
