@@ -62,7 +62,7 @@ services:
   #      - files:/mnt/files
 
   nginx:
-    image: wodby/nginx:1.17-5.8.2
+    image: wodby/nginx:1.19-5.13.2
     depends_on:
       - php
     environment:
