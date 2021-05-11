@@ -51,8 +51,7 @@
         "roave/security-advisories": "dev-master"
     },
     "conflict": {
-        "drupal/drupal": "*",
-        "drupal/damopen": "*"
+        "drupal/drupal": "*"
     },
     "extra": {
         "enable-patching": true,

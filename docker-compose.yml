@@ -90,7 +90,6 @@ services:
       - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`mailhog.${PROJECT_BASE_URL}`)"
 
   traefik:
-    container_name: "${PROJECT_NAME}_traefik"
     image: library/traefik:v2.3.2
     command: --api.insecure=true --providers.docker
     volumes:
