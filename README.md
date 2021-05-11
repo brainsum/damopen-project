@@ -21,19 +21,19 @@ composer create-project brainsum/damopen-project my-damopen-project
 
 For a specific release:
 ```shell script
-composer create-project brainsum/damopen-project:0.1.0 my-damopen-project
+composer create-project brainsum/damopen-project=2.0.x-dev my-damopen-project
 ```
 
 ### Composer in docker
 
 For the latest release:
 ```shell script
-DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app wodby/drupal-php:7.3-dev-4.14.3 composer create-project brainsum/damopen-project .
+DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:7.4-dev-4.22.1 composer create-project brainsum/damopen-project .
 ```
 
 For a specific release:
 ```shell script
-DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app wodby/drupal-php:7.3-dev-4.14.3 composer create-project brainsum/damopen-project:0.1.0 .
+DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:7.4-dev-4.22.1 composer create-project brainsum/damopen-project=2.0.x-dev .
 ```
 
 Note: The wodby/drupal-php image is just an example.
