@@ -28,70 +28,14 @@
     },
     "require": {
         "php": "^7.3",
-        "brainsum/damopen": "^1.0.0",
-        "composer/installers": "^1.11.0",
-        "cweagans/composer-patches": "^1.7.0",
-        "drupal/admin_toolbar": "^3.0.0",
-        "drupal/adminimal_admin_toolbar": "^1.11.0",
-        "drupal/core-composer-scaffold": "^9.1.8",
-        "drupal/core-project-message": "^9.1.8",
-        "drupal/core-recommended": "^9.1.8",
-        "drupal/exception_mailer": "^3.0@beta",
-        "drupal/maillog": "^1.0@beta",
-        "drush/drush": "^10.5.0",
-        "oomphinc/composer-installers-extender": "^2.0.0"
-    },
-    "require-dev": {
-        "drupal-composer/drupal-security-advisories": "8.x-dev",
-        "drupal/console": "^1.9.7",
-        "drupal/core-dev": "^9.1.8",
-        "drupal/devel": "^4.1.1",
-        "drupal/devel_entity_updates": "^3.0.1",
-        "drupal/devel_php": "^1.3.0",
-        "roave/security-advisories": "dev-master"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
+        "drupal/core-project-message": "^9.1.8"
     },
     "extra": {
-        "enable-patching": true,
-        "composer-exit-on-patch-failure": true,
-        "patches": {},
-        "drupal-scaffold": {
-            "locations": {
-                "web-root": "web/"
-            },
-            "file-mapping": {
-                "[web-root]/sites/default/settings.php": "composer/damopen/assets/settings.php",
-                "[web-root]/sites/default/services.yml": "composer/damopen/assets/services.yml",
-                "[web-root]/robots.txt": false
-            },
-            "initial": {
-                ".editorconfig": "[web-root]/.editorconfig",
-                ".gitattributes": "[web-root]/.gitattributes"
-            }
-        },
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-        },
-        "installer-types": ["bower-asset", "npm-asset"],
         "drupal-core-project-message": {
             "include-keys": ["homepage", "support"],
             "post-create-project-cmd-message": [
                 "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the project skeleton  </>",
                 "<bg=blue;fg=white>  from the brainsum/damopen-project template!               </>",
                 "<bg=blue;fg=white>                                                         </>",
                 "",
@@ -99,8 +43,9 @@
 
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message",
-                "  * Update .env and drush/drush.yml as needed",
-                "  * Fix directory permissions (e.g 770 with <web-server>:<current-user> for web/sites/default/files).",
+                "  * Update .env and app/drush/drush.yml as needed",
+                "  * Fix directory permissions (e.g 770 with <web-server>:<current-user> for app/web/sites/default/files).",
+                "  * Install Drupal and its dependencies with `composer install` from the `app` folder",
                 "  * Install the site using the damopen profile: https://www.drupal.org/docs/8/install",
                 "    * E.g for a local docker setup (for development): drush site-install --account-pass=123 damopen -y",
                 "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
@@ -112,8 +57,8 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "mkdir -p config/sync web/sites/default/files private_files tmp",
-            "cp example.env .env"
+            "mkdir -p app/config/sync app/web/sites/default/files app/private_files app/tmp",
+            "cd app/ && composer install"
         ]
     }
 }

@@ -55,6 +55,8 @@ $settings['file_public_path'] = 'sites/default/files';
 $settings['file_temp_path'] = '/tmp';
 $settings['file_private_path'] = '../private_files';
 $settings['config_sync_directory'] = '../config/sync';
+// Required performance boost for containerized deployments.
+$settings['php_storage']['twig']['directory'] = '/tmp/drupal-storage/php';
 
 // This points to the <project root>/settings folder.
 if (file_exists(__DIR__ . '/../../../settings/settings.local.php')) {

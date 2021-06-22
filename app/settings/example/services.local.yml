@@ -1,0 +1,13 @@
+parameters:
+  session.storage.options:
+    # @don't forget to update this
+    cookie_domain: '.damopen.docker.localhost'
+    gc_probability: 1
+    gc_divisor: 100
+    gc_maxlifetime: 200000
+    cookie_lifetime: 2000000
+  # For local development.
+  twig.config:
+    debug: true
+    auto_reload: true
+    cache: false

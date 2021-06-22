@@ -1,0 +1,41 @@
+# Local development services.
+#
+# To activate this feature, follow the instructions at the top of the
+# 'example.settings.local.php' file, which sits next to this file.
+parameters:
+  # @todo: Figure out how to send stdout to grafana.
+  monolog.channel_handlers:
+    default: ['drupal.dblog', 'filtered_stdout', 'filtered_stderr']
+
+services:
+  monolog.formatter.json:
+    class: Monolog\Formatter\JsonFormatter
+
+  monolog.handler.stdout:
+    class: Monolog\Handler\StreamHandler
+    calls:
+      - [setFormatter, ['@monolog.formatter.json']]
+    arguments:
+      - 'php://stdout'
+      - 200 # See \Monolog\Logger::INFO
+
+  monolog.handler.stderr:
+    class: Monolog\Handler\StreamHandler
+    calls:
+      - [setFormatter, ['@monolog.formatter.json']]
+    arguments:
+      - 'php://stderr'
+      - 400 # See \Monolog\Logger::ERROR
+
+  monolog.handler.filtered_stdout:
+    class: Monolog\Handler\FilterHandler
+    arguments:
+      - '@monolog.handler.stdout'
+      - 100 # \Monolog\Logger::DEBUG
+      - 250 # \Monolog\Logger::NOTICE
+
+  monolog.handler.filtered_stderr:
+    class: Monolog\Handler\FilterHandler
+    arguments:
+      - '@monolog.handler.stderr'
+      - 300 # \Monolog\Logger::WARNING

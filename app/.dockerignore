@@ -1,0 +1,11 @@
+/web/core
+/web/libraries
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+/web/sites/default/files
+/private_files
+/tmp
+/drush/contrib
+/drush/local
+/vendor
