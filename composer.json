@@ -7,6 +7,10 @@
         {
             "name": "mhavelant",
             "email": "mhavelant@brainsum.com"
+        },
+        {
+            "name": "lbesenyei",
+            "email": "lbesenyei@brainsum.com"
         }
     ],
     "minimum-stability": "dev",
