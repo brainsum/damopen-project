@@ -18,7 +18,15 @@
     "config": {
         "apcu-autoloader": true,
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
     },
     "repositories": [
         {
@@ -31,8 +39,8 @@
         }
     ],
     "require": {
-        "php": "^7.3",
-        "brainsum/damopen": "^1.0@beta",
+        "php": "^8.1",
+        "brainsum/damopen": "^2.0",
         "composer/installers": "^1.11.0",
         "cweagans/composer-patches": "^1.7.0",
         "drupal/admin_toolbar": "^3.0.0",
@@ -42,7 +50,8 @@
         "drupal/exception_mailer": "^3.0@beta",
         "drupal/maillog": "^1.0@beta",
         "drush/drush": "^10.5.0",
-        "oomphinc/composer-installers-extender": "^2.0.0"
+        "oomphinc/composer-installers-extender": "^2.0.0",
+        "php-ffmpeg/php-ffmpeg": "^0.19.0"
     },
     "require-dev": {
         "drupal-composer/drupal-security-advisories": "9.x-dev",
@@ -59,7 +68,11 @@
     "extra": {
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
-        "patches": {},
+        "patches": {
+            "drupal/php_ffmpeg": {
+                "Incompatible with newest version of the php-ffmpeg (v0.19.0) package\n": "https://www.drupal.org/files/issues/2022-06-24/symfony-drupal-cache-adapter.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

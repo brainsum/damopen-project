@@ -1,11 +1,12 @@
 # Development env for the projects.
 ## @see: https://github.com/wodby/docker4drupal
 
-version: "2"
+version: "3.7"
 
 services:
   db:
-    image: wodby/mariadb:10.4-3.7.1
+    image: wodby/mariadb:10.9-3.24.1
+    container_name: "${PROJECT_NAME}_mariadb"
     stop_grace_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
@@ -18,7 +19,8 @@ services:
 
   php:
     # Linux| 1000:1000
-    image: brainsum/damopen-php:7.4-dev-4.22.1
+    image: brainsum/damopen-php:8.1-dev-4.42.11
+    container_name: "${PROJECT_NAME}_php"
     #    # Mac| 501:20
     #    image: wodby/drupal-php:7.3-dev-macos-4.14.3
     environment:
@@ -62,7 +64,8 @@ services:
   #      - files:/mnt/files
 
   nginx:
-    image: wodby/nginx:1.19-5.13.2
+    image: wodby/nginx:1.23-5.30.1
+    container_name: "${PROJECT_NAME}_nginx"
     depends_on:
       - php
     environment:
@@ -85,12 +88,14 @@ services:
 
   mailhog:
     image: mailhog/mailhog
+    container_name: "${PROJECT_NAME}_mailhog"
     labels:
       - "traefik.http.services.${PROJECT_NAME}_mailhog.loadbalancer.server.port=8025"
       - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`mailhog.${PROJECT_BASE_URL}`)"
 
   traefik:
-    image: library/traefik:v2.3.2
+    image: traefik:v2.0
+    container_name: "${PROJECT_NAME}_traefik"
     command: --api.insecure=true --providers.docker
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
