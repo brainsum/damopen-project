@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ecf2e2b6e85fbe42ff7d04ca98c2b801",
+    "content-hash": "9019defde761d28dcb14f0ea9838fc81",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -164,12 +164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "9b8727d59362ea61627b5ad93b5d5dd442ca6f6a"
+                "reference": "0d41f0bbfa068a2a0e7ddce4c89cbb7efd74be18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/9b8727d59362ea61627b5ad93b5d5dd442ca6f6a",
-                "reference": "9b8727d59362ea61627b5ad93b5d5dd442ca6f6a",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/0d41f0bbfa068a2a0e7ddce4c89cbb7efd74be18",
+                "reference": "0d41f0bbfa068a2a0e7ddce4c89cbb7efd74be18",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "drupal/entity_embed": "^1.1.0",
                 "drupal/exif": "^2.3.0",
                 "drupal/field_group": "^3.1.0",
-                "drupal/filehash": "1.4.0",
+                "drupal/filehash": "^1.11",
                 "drupal/focal_point": "^1.5.0",
                 "drupal/image_effects": "^3.0.0",
                 "drupal/inline_entity_form": "^1.0.0",
@@ -273,7 +273,7 @@
                 "issues": "https://github.com/brainsum/damopen/issues",
                 "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2023-02-17T11:32:56+00:00"
+            "time": "2023-02-17T11:58:21+00:00"
         },
         {
             "name": "brainsum/media_upload",
@@ -2757,26 +2757,29 @@
         },
         {
             "name": "drupal/filehash",
-            "version": "1.4.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/filehash.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/filehash-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "341e1d1da58dd05f8bbc11d317b54b70c3838d9b"
+                "url": "https://ftp.drupal.org/files/projects/filehash-8.x-1.11.zip",
+                "reference": "8.x-1.11",
+                "shasum": "2399804f2e5f4d79d22ac768b736642c294a0d18"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.5 || ^9.0 || ^10.0"
+            },
+            "require-dev": {
+                "drush/drush": "^10.6 || ^11.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1578637687",
+                    "version": "8.x-1.11",
+                    "datestamp": "1648209292",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2784,7 +2787,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9"
+                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
@@ -2804,7 +2807,17 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/filehash",
                 "issues": "https://www.drupal.org/project/issues/filehash"
-            }
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/mfb"
+                },
+                {
+                    "type": "patreon",
+                    "url": "https://www.patreon.com/mfb"
+                }
+            ]
         },
         {
             "name": "drupal/focal_point",

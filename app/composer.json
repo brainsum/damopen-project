@@ -44,7 +44,7 @@
         "composer/installers": "^1.11.0",
         "cweagans/composer-patches": "^1.7.0",
         "drupal/admin_toolbar": "^3.0.0",
-        "drupal/adminimal_admin_toolbar": "^1.11.0",
+        "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/exception_mailer": "^3.0@beta",
