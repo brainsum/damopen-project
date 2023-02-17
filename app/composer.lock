@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c432e82f8e961a5bbc584e3fb8c610e0",
+    "content-hash": "ecf2e2b6e85fbe42ff7d04ca98c2b801",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -164,12 +164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "beb371e1c0f01c1ca78717caec158bb1f9768e39"
+                "reference": "9b8727d59362ea61627b5ad93b5d5dd442ca6f6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/beb371e1c0f01c1ca78717caec158bb1f9768e39",
-                "reference": "beb371e1c0f01c1ca78717caec158bb1f9768e39",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/9b8727d59362ea61627b5ad93b5d5dd442ca6f6a",
+                "reference": "9b8727d59362ea61627b5ad93b5d5dd442ca6f6a",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +187,7 @@
                 "drupal/image_effects": "^3.0.0",
                 "drupal/inline_entity_form": "^1.0.0",
                 "drupal/jsonapi_extras": "^3.16.0",
-                "drupal/maxlength": "^1.0.0",
+                "drupal/maxlength": "^2.0.0",
                 "drupal/media_entity_imagemagick": "^3.0.0",
                 "drupal/php_ffmpeg": "^1.1.0",
                 "drupal/redirect_after_login": "^2.7.0",
@@ -273,7 +273,7 @@
                 "issues": "https://github.com/brainsum/damopen/issues",
                 "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2023-02-16T09:19:43+00:00"
+            "time": "2023-02-17T11:32:56+00:00"
         },
         {
             "name": "brainsum/media_upload",
@@ -3500,17 +3500,17 @@
         },
         {
             "name": "drupal/maxlength",
-            "version": "1.0.0-rc1",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/maxlength.git",
-                "reference": "8.x-1.0-rc1"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/maxlength-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "44eb9d79d9814cd786c2c9874c28033759665a99"
+                "url": "https://ftp.drupal.org/files/projects/maxlength-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "9503a590601cb54b2f4c33cf810ba0abcb958369"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -3518,11 +3518,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1593198218",
+                    "version": "2.0.1",
+                    "datestamp": "1670863355",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3532,34 +3532,41 @@
             ],
             "authors": [
                 {
-                    "name": "cedewey",
-                    "homepage": "https://www.drupal.org/user/38694"
+                    "name": "Marius Scurtescu (mariuss)",
+                    "homepage": "https://www.drupal.org/u/mariuss",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
+                    "name": "Clayton Dewey (cedewey)",
+                    "homepage": "https://www.drupal.org/u/cedewey",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "hipp2bsquare",
-                    "homepage": "https://www.drupal.org/user/2473076"
+                    "name": "Daniel Wehner (dawehner)",
+                    "homepage": "https://www.drupal.org/u/dawehner",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "joevagyok",
-                    "homepage": "https://www.drupal.org/user/2876343"
+                    "name": "Paulino Michelazzo (pmichelazzo)",
+                    "homepage": "https://www.drupal.org/u/pmichelazzo",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "mariuss",
-                    "homepage": "https://www.drupal.org/user/28539"
+                    "name": "Jeff Hipp (hipp2bsquare)",
+                    "homepage": "https://www.drupal.org/u/hipp2bsquare",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "srdtwc",
-                    "homepage": "https://www.drupal.org/user/3422763"
+                    "name": "Steven DuBois (srdtwc)",
+                    "homepage": "https://www.drupal.org/u/srdtwc",
+                    "role": "Maintainer"
                 }
             ],
-            "description": "Limit the number of characters in textfields and textareas and shows the amount of characters left.",
+            "description": "Maxlength allows a soft or hard character limit to be set on titles, text fields and link fields.",
             "homepage": "https://www.drupal.org/project/maxlength",
             "support": {
-                "source": "https://git.drupalcode.org/project/maxlength"
+                "source": "https://git.drupalcode.org/project/maxlength",
+                "issues": "https://www.drupal.org/project/issues/maxlength"
             }
         },
         {
@@ -13449,6 +13456,7 @@
                 "kazist/phpwhois": "<=4.2.6",
                 "kelvinmo/simplexrd": "<3.1.1",
                 "kevinpapst/kimai2": "<1.16.7",
+                "kimai/kimai": "<1.1",
                 "kitodo/presentation": "<3.1.2",
                 "klaviyo/magento2-extension": ">=1,<3",
                 "krayin/laravel-crm": "<1.2.2",
@@ -13478,6 +13486,7 @@
                 "magento/magento1ce": "<1.9.4.3",
                 "magento/magento1ee": ">=1,<1.14.4.3",
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
+                "maikuolan/phpmussel": ">=1,<1.6",
                 "marcwillmann/turn": "<0.3.3",
                 "matyhtf/framework": "<3.0.6",
                 "mautic/core": "<4.3|= 2.13.1",
@@ -13694,7 +13703,7 @@
                 "titon/framework": ">=0,<9.9.99",
                 "tobiasbg/tablepress": "<= 2.0-RC1",
                 "topthink/framework": "<6.0.14",
-                "topthink/think": "<=6.0.9",
+                "topthink/think": "<=6.1.1",
                 "topthink/thinkphp": "<=3.2.3",
                 "tribalsystems/zenario": "<=9.3.57595",
                 "truckersmp/phpwhois": "<=4.3.1",
@@ -13722,6 +13731,7 @@
                 "wallabag/wallabag": "<2.5.4",
                 "wanglelecc/laracms": "<=1.0.3",
                 "web-auth/webauthn-framework": ">=3.3,<3.3.4",
+                "webbuilders-group/silverstripe-kapost-bridge": "<0.4",
                 "webcoast/deferred-image-processing": "<1.0.2",
                 "webpa/webpa": "<3.1.2",
                 "wikimedia/parsoid": "<0.12.2",
