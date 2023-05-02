@@ -18,7 +18,10 @@
     "config": {
         "apcu-autoloader": true,
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "drupal/core-project-message": true
+        }
     },
     "repositories": {
         "drupal-8": {
