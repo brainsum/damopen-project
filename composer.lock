@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71d9aa9b3e86c83a573a87ddc3fad0b4",
+    "content-hash": "7a84d15dcebda301fc92b989631c4e43",
     "packages": [
         {
             "name": "drupal/core-project-message",
@@ -55,8 +55,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3"
+        "php": ">=8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }

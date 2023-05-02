@@ -13,7 +13,7 @@ This template was based on the following:
 - `app`: the actual Drupal folder. This is the only folder mounted into the docker container, installing Drupal, adding dependencies, using drush, etc. should be executed from here.
     - Note, in a containerized environment this is the only folder that should be available to the image at build time.
     - Git root should still be the project root.
-- `docker`: contains Dockerfiles and some helpers for building the images 
+- `docker`: contains Dockerfiles and some helpers for building the images
 
 ## Installation
 
@@ -35,12 +35,12 @@ composer create-project brainsum/damopen-project=2.0.x-dev my-damopen-project
 
 For the latest release:
 ```shell script
-DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:7.4-dev-4.22.1 composer create-project brainsum/damopen-project .
+DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:8.1-dev-4.42.11 composer create-project brainsum/damopen-project .
 ```
 
 For a specific release:
 ```shell script
-DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:7.4-dev-4.22.1 composer create-project brainsum/damopen-project=2.0.x-dev .
+DAMOPEN_PROJECT_DIR=my-damopen-project; mkdir "${DAMOPEN_PROJECT_DIR}" && docker run --rm -u "$(id -u)":"$(id -g)" -w /app --mount type=bind,src="$(pwd)"/"${DAMOPEN_PROJECT_DIR}",dst=/app brainsum/damopen-php:8.1-dev-4.42.11 composer create-project brainsum/damopen-project=2.0.x-dev .
 ```
 
 This creates the base structure. After the project installed, you need to enter go to the `app` folder and use `composer install`.
