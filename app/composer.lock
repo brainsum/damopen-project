@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d20934c5d8066a8d9ef90c027bcce6eb",
+    "content-hash": "bd0813085f19a228caaa5d706ec6fb85",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -94,16 +94,16 @@
         },
         {
             "name": "brainsum/damopen",
-            "version": "2.0.10",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "09632bfb260a7996ae1ac0bbb28b8169a5164533"
+                "reference": "081e77a1c6a0bdc7373970e46500ea10bfa813c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/09632bfb260a7996ae1ac0bbb28b8169a5164533",
-                "reference": "09632bfb260a7996ae1ac0bbb28b8169a5164533",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/081e77a1c6a0bdc7373970e46500ea10bfa813c8",
+                "reference": "081e77a1c6a0bdc7373970e46500ea10bfa813c8",
                 "shasum": ""
             },
             "require": {
@@ -206,9 +206,9 @@
             "description": "Distribution for quickly starting a new Digital Media Assets Management system with Drupal",
             "support": {
                 "issues": "https://github.com/brainsum/damopen/issues",
-                "source": "https://github.com/brainsum/damopen/tree/2.0.10"
+                "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2024-01-16T15:26:43+00:00"
+            "time": "2024-01-16T15:33:06+00:00"
         },
         {
             "name": "brainsum/media_upload",
@@ -16798,6 +16798,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "brainsum/damopen": 20,
         "drupal/adminimal_admin_toolbar": 20,
         "drupal-composer/drupal-security-advisories": 20,
         "roave/security-advisories": 20
