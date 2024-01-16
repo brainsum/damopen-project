@@ -64,16 +64,16 @@
         },
         {
             "name": "brainsum/damo_theme",
-            "version": "0.7.0",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damo-theme.git",
-                "reference": "c80083d169a273299142cae8fd9dfbe5913247a1"
+                "reference": "a8553f5a7ead06c4ef68a675a4a3137bc9c425cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damo-theme/zipball/c80083d169a273299142cae8fd9dfbe5913247a1",
-                "reference": "c80083d169a273299142cae8fd9dfbe5913247a1",
+                "url": "https://api.github.com/repos/brainsum/damo-theme/zipball/a8553f5a7ead06c4ef68a675a4a3137bc9c425cd",
+                "reference": "a8553f5a7ead06c4ef68a675a4a3137bc9c425cd",
                 "shasum": ""
             },
             "require": {
@@ -88,9 +88,9 @@
             "description": "Theme for brainsum DAMo project.",
             "support": {
                 "issues": "https://github.com/brainsum/damo-theme/issues",
-                "source": "https://github.com/brainsum/damo-theme/tree/0.7.0"
+                "source": "https://github.com/brainsum/damo-theme/tree/0.8.0"
             },
-            "time": "2023-02-20T11:14:52+00:00"
+            "time": "2024-01-16T15:43:29+00:00"
         },
         {
             "name": "brainsum/damopen",
