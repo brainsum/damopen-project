@@ -52,6 +52,7 @@
         "drupal/core-recommended": "^10.0",
         "drupal/dropzonejs": "^2.8",
         "drupal/exception_mailer": "^4.0",
+        "drupal/jquery_ui_dialog": "^2.0",
         "drupal/maillog": "^1.1",
         "drush/drush": "^12.0",
         "enyo/dropzone": "^5.9",
