@@ -1,0 +1,17 @@
+# Non docker configuration.
+drush:
+  paths:
+    config:
+      - web/sites/default/drush.local.yml
+options:
+  root: /home/devel/www/your_document_root/app/web
+  uri: 'https://your_domain.com'
+
+# Docker configuration.
+drush:
+  paths:
+    config: /var/www/html/drush/local/drush.yml
+
+options:
+  root: /var/www/html/web
+  uri: '${env.DRUSH_BASE_URI}'
