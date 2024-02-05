@@ -160,16 +160,16 @@
         },
         {
             "name": "brainsum/damopen",
-            "version": "1.0.0-beta1",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "7b2ea92d4a9e9e5d3d3768ed92c165df6dfe9dc4"
+                "reference": "ee9624ae8308191cd23232781cb33a39878e8c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/7b2ea92d4a9e9e5d3d3768ed92c165df6dfe9dc4",
-                "reference": "7b2ea92d4a9e9e5d3d3768ed92c165df6dfe9dc4",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/ee9624ae8308191cd23232781cb33a39878e8c82",
+                "reference": "ee9624ae8308191cd23232781cb33a39878e8c82",
                 "shasum": ""
             },
             "require": {
@@ -272,9 +272,9 @@
             "description": "Distribution for quickly starting a new Digital Media Assets Management system with Drupal",
             "support": {
                 "issues": "https://github.com/brainsum/damopen/issues",
-                "source": "https://github.com/brainsum/damopen/tree/1.0.0-beta1"
+                "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2022-05-26T07:07:15+00:00"
+            "time": "2024-01-26T11:13:17+00:00"
         },
         {
             "name": "brainsum/media_upload",
