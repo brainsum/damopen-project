@@ -98,12 +98,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "081e77a1c6a0bdc7373970e46500ea10bfa813c8"
+                "reference": "ee9624ae8308191cd23232781cb33a39878e8c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/081e77a1c6a0bdc7373970e46500ea10bfa813c8",
-                "reference": "081e77a1c6a0bdc7373970e46500ea10bfa813c8",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/ee9624ae8308191cd23232781cb33a39878e8c82",
+                "reference": "ee9624ae8308191cd23232781cb33a39878e8c82",
                 "shasum": ""
             },
             "require": {
@@ -208,7 +208,7 @@
                 "issues": "https://github.com/brainsum/damopen/issues",
                 "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2024-01-16T15:33:06+00:00"
+            "time": "2024-01-26T11:13:17+00:00"
         },
         {
             "name": "brainsum/media_upload",
