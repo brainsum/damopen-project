@@ -45,6 +45,7 @@
         "brainsum/damopen": "2.0.x-dev",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7.0",
+        "drupal-composer/drupal-security-advisories": "8.x-dev",
         "drupal/admin_toolbar": "^3.4",
         "drupal/adminimal_admin_toolbar": "dev-1.x",
         "drupal/ckeditor": "^1.0",
@@ -61,7 +62,6 @@
         "php-ffmpeg/php-ffmpeg": "^1.2"
     },
     "require-dev": {
-        "drupal-composer/drupal-security-advisories": "9.x-dev",
         "drupal/core-dev": "^10.0",
         "drupal/devel": "^5.1",
         "drupal/devel_entity_updates": "^4.1",
