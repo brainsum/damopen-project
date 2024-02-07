@@ -48,7 +48,6 @@
         "drupal-composer/drupal-security-advisories": "8.x-dev",
         "drupal/admin_toolbar": "^3.4",
         "drupal/adminimal_admin_toolbar": "dev-1.x",
-        "drupal/ckeditor": "^1.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/dropzonejs": "^2.8",
