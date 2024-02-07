@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35942444b650b15457512956044b7e7b",
+    "content-hash": "1e425cc2a2ca02d3a406e274faaf697d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -98,12 +98,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damopen.git",
-                "reference": "71d9887e114a0b22ff2cb4b17d2d39b957b9e637"
+                "reference": "96879d6866ddda943750d0fa618387f6ea64677e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damopen/zipball/71d9887e114a0b22ff2cb4b17d2d39b957b9e637",
-                "reference": "71d9887e114a0b22ff2cb4b17d2d39b957b9e637",
+                "url": "https://api.github.com/repos/brainsum/damopen/zipball/96879d6866ddda943750d0fa618387f6ea64677e",
+                "reference": "96879d6866ddda943750d0fa618387f6ea64677e",
                 "shasum": ""
             },
             "require": {
@@ -145,6 +145,7 @@
                 "drupal/exception_mailer": "Allows sending alert emails on errors and exceptions.",
                 "drupal/maillog": "Allows logging outgoing emails."
             },
+            "default-branch": true,
             "type": "drupal-profile",
             "extra": {
                 "patches": {
@@ -153,6 +154,9 @@
                         "Summary attributes bugfix": "https://www.drupal.org/files/issues/2018-12-17/core-undefined-index-summary_attributes-2998194-9.patch",
                         "Add permission 'View unpublished {bundle} media'": "https://www.drupal.org/files/issues/2019-11-27/2936652-media-view-any-unpublished-per-bundle-25.patch",
                         "Remove jsonapi's file filter restriction": "https://raw.githubusercontent.com/brainsum/composer-patches/master/drupal-core/8.x/jsonapi-file-filter-restriction-remove.patch"
+                    },
+                    "drupal/video_embed_field": {
+                        "Add support for Ckeditor 5": "https://www.drupal.org/files/issues/2024-02-01/3311063-50.patch"
                     }
                 },
                 "drupal-scaffold": {
@@ -208,7 +212,7 @@
                 "issues": "https://github.com/brainsum/damopen/issues",
                 "source": "https://github.com/brainsum/damopen/tree/2.0.x"
             },
-            "time": "2024-02-07T14:17:14+00:00"
+            "time": "2024-02-07T16:35:53+00:00"
         },
         {
             "name": "brainsum/media_upload",
