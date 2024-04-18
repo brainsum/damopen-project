@@ -19,6 +19,9 @@
         "apcu-autoloader": true,
         "optimize-autoloader": true,
         "sort-packages": true
+        "allow-plugins": {
+            "drupal/core-project-message": true
+        }
     },
     "repositories": {
         "drupal-8": {
@@ -62,7 +65,7 @@
     "scripts": {
         "post-create-project-cmd": [
             "mkdir -p app/config/sync app/web/sites/default/files app/private_files app/tmp",
-            "cd app/ && composer config --no-plugins allow-plugins.drupal/core-project-message true && composer install"
+            "cd app/ && composer install"
         ]
     }
 }
