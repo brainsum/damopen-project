@@ -88,6 +88,14 @@ services:
     labels:
       - "traefik.http.services.${PROJECT_NAME}_mailhog.loadbalancer.server.port=8025"
       - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`mailhog.${PROJECT_BASE_URL}`)"
+  
+  solr:
+    image: wodby/solr:8-4.6.1
+    environment:
+      SOLR_DEFAULT_CONFIG_SET: "search_api_solr_4.0"
+      SOLR_HEAP: 1024m
+    labels:
+      - "traefik.http.routers.${PROJECT_NAME}_solr.rule=Host(`solr.${PROJECT_BASE_URL}`)"
 
   traefik:
     image: library/traefik:v2.3.2
