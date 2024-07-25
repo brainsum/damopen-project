@@ -9,7 +9,7 @@ fi
 echo "Using compose files: ${COMPOSE_FILES}"
 
 # Stop the container. Don't use down, or you'll lose your db.
-docker-compose ${COMPOSE_FILES} stop || exit 1
+docker compose ${COMPOSE_FILES} stop || exit 1
 # Stop containers managed by pygmy. The pygmy down will remove data, use it only when necessary.
 # pygmy stop || exit 1
 
