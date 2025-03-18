@@ -42,8 +42,8 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "brainsum/damopen": "2.0.x-dev",
+        "php": "^8.3",
+        "brainsum/damopen": "3.0.x-dev",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7.0",
         "drupal-composer/drupal-security-advisories": "8.x-dev",

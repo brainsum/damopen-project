@@ -5,7 +5,7 @@ version: "2"
 
 services:
   db:
-    image: wodby/mariadb:10.4-3.7.1
+    image: wodby/mariadb:10.6-3.30.5
     stop_grace_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
@@ -18,7 +18,7 @@ services:
 
   php:
     # Linux| 1000:1000
-    image: brainsum/damopen-php:8.1-dev-4.42.11
+    image: brainsum/damopen-php:8.3-dev-4.66.0
     #    # Mac| 501:20
     #    image: wodby/drupal-php:7.3-dev-macos-4.14.3
     environment:
