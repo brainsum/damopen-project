@@ -57,7 +57,7 @@
         "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/jquery_ui_dialog": "^2.0",
         "drupal/maillog": "^1.1",
-        "drush/drush": "^12.0",
+        "drush/drush": "^13.0",
         "enyo/dropzone": "^5.9",
         "oomphinc/composer-installers-extender": "^2.0",
         "php-ffmpeg/php-ffmpeg": "^1.2"
