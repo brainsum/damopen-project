@@ -43,10 +43,10 @@
     ],
     "require": {
         "php": "^8.3",
-        "brainsum/damopen": "3.0.x-dev",
+        "brainsum/damopen": "4.0.x-dev",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7.0",
-        "drupal-composer/drupal-security-advisories": "8.x-dev",
+        "drupal-composer/drupal-security-advisories": "9.x-dev",
         "drupal/admin_toolbar": "^3.4",
         "drupal/adminimal_admin_toolbar": "dev-1.x",
         "drupal/core-composer-scaffold": "^10.0",
