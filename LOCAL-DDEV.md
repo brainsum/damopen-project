@@ -8,7 +8,7 @@ ddev launch
 ddev drush uli
 ```
 
-The local site runs Drupal 11.4.7, PHP 8.3, MariaDB 10.11, and Drush 13.
+The local site runs Drupal 11.4.12, PHP 8.3, MariaDB 10.11, and Drush 13.
 FFmpeg, FFprobe, and ImageMagick are available in the DDEV web container.
 Use `ddev stop` to stop it and `ddev composer` to manage dependencies in `app`.
 
@@ -57,8 +57,10 @@ creation forms, theme-switching settings, FFmpeg settings, and JSON:API.
 The media-normalizer unit test checks that only media entities are supported.
 The functional test installs a fresh profile with isolated test tables and verifies
 image creation, rendering, and a byte-for-byte private download as an administrator.
-Both tests pass (16 assertions total). Composer reports no vulnerability advisories,
-but flags two existing abandoned dependencies; see the distribution notes.
+Both tests pass (16 assertions total). After the 10 November 2026 security
+updates, Composer reports no vulnerability advisories but flags three abandoned
+dependencies; see the distribution notes. Snapshot before those updates:
+`pre-security-updates-20261110`.
 
 Contributed dependencies still emit deprecations for APIs scheduled for removal
 in Drupal 12/13. The functional test does not enforce full config schema coverage;
