@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+## Description: Run DAMopen's real-browser multi-image upload test.
+## Usage: test-damopen [phpunit-test-path]
+## Example: ddev test-damopen
+set -euo pipefail
+cd /var/www/html/app
+exec bash packages/damopen/tests/run-ddev.sh "$@"

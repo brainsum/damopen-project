@@ -28,10 +28,23 @@
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "mglaman/composer-drupal-lenient": true,
+            "symfony/runtime": true
         }
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "packages/damopen",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "brainsum/damopen": "4.0.x-dev"
+                },
+                "reference": "config"
+            }
+        },
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -43,29 +56,39 @@
     ],
     "require": {
         "php": "^8.3",
-        "brainsum/damopen": "3.0.x-dev",
+        "brainsum/damopen": "4.0.x-dev",
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7.0",
         "drupal-composer/drupal-security-advisories": "8.x-dev",
         "drupal/admin_toolbar": "^3.4",
-        "drupal/adminimal_admin_toolbar": "dev-1.x",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
+        "drupal/adminimal_admin_toolbar": "^2.0",
+        "drupal/ai": "^1.2",
+        "drupal/ai_context": "^1.0@RC",
+        "drupal/ai_image_alt_text": "^1.0",
+        "drupal/ai_provider_anthropic": "^1.3@beta",
+        "drupal/ai_provider_ollama": "^1.2@RC",
+        "drupal/ai_vdb_provider_postgres": "1.0.0-alpha4",
+        "drupal/ai_vdb_provider_qdrant": "^1.3",
+        "drupal/core-composer-scaffold": "^11.3",
+        "drupal/core-recommended": "^11.3",
         "drupal/dropzonejs": "^2.8",
         "drupal/exception_mailer": "^4.0",
         "drupal/filehash": "^3.0",
         "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/jquery_ui_dialog": "^2.0",
         "drupal/maillog": "^1.1",
+        "drupal/token": "^1.15",
+        "drupal/video_embed_field": "^3.0",
         "drush/drush": "^13.0",
         "enyo/dropzone": "^5.9",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "php-ffmpeg/php-ffmpeg": "^1.2"
     },
     "require-dev": {
-        "drupal/core-dev": "^10.0",
+        "drupal/core-dev": "^11.3",
         "drupal/devel": "^5.1",
-        "drupal/devel_entity_updates": "^4.1",
+        "drupal/devel_entity_updates": "^5.0",
         "drupal/devel_php": "^1.5",
         "drupal/upgrade_status": "^4.0",
         "mglaman/drupal-check": "^1.4",
@@ -77,7 +100,11 @@
     "extra": {
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
-        "patches": {},
+        "patches": {
+            "drupal/ai_vdb_provider_postgres": {
+                "Index Search API processor properties as single values": "packages/damopen-extras/patches/ai_vdb_provider_postgres-processor-fields.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -115,6 +142,13 @@
             "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         },
-        "installer-types": ["bower-asset", "npm-asset"]
+        "installer-types": ["bower-asset", "npm-asset"],
+        "drupal-lenient": {
+            "allowed-list": [
+                "brainsum/damo_theme",
+                "drupal/php_ffmpeg",
+                "drupal/switch_page_theme"
+            ]
+        }
     }
 }

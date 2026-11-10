@@ -1,0 +1,17 @@
+# Local development only: PostgreSQL with pgvector for the image search
+# vector store. No public host port.
+services:
+  pgvector:
+    container_name: ddev-${DDEV_SITENAME}-pgvector
+    image: pgvector/pgvector:0.8.1-pg16
+    environment:
+      POSTGRES_USER: damopen
+      POSTGRES_PASSWORD: damopen
+      POSTGRES_DB: damopen_vectors
+    volumes:
+      - damopen-pgvector:/var/lib/postgresql/data
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+volumes:
+  damopen-pgvector:

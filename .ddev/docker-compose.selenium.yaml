@@ -1,0 +1,13 @@
+services:
+  selenium:
+    image: selenium/standalone-chrome:120.0
+    platform: linux/amd64
+    container_name: ddev-${DDEV_SITENAME}-selenium
+    shm_size: '2gb'
+    environment:
+      - SE_NODE_MAX_SESSIONS=1
+    volumes:
+      - ../:/var/www/html:ro
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}

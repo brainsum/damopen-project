@@ -1,0 +1,22 @@
+# Copy into the DAMopen project's .ddev directory, then run ddev restart.
+# Local development only: these services have no public host ports.
+services:
+  qdrant:
+    container_name: ddev-${DDEV_SITENAME}-qdrant
+    image: qdrant/qdrant:v1.15.5
+    volumes:
+      - damopen-qdrant:/qdrant/storage
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+  ollama:
+    container_name: ddev-${DDEV_SITENAME}-ollama
+    image: ollama/ollama:0.11.4
+    volumes:
+      - damopen-ollama:/root/.ollama
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+volumes:
+  damopen-qdrant:
+  damopen-ollama:

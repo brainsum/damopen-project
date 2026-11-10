@@ -34,8 +34,8 @@
         }
     },
     "require": {
-        "php": ">=8.1",
-        "drupal/core-project-message": "^10.1.8"
+        "php": "^8.3",
+        "drupal/core-project-message": "^11.3"
     },
     "extra": {
         "drupal-core-project-message": {
