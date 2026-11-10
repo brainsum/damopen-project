@@ -70,3 +70,36 @@ Run `ddev test-damopen` to exercise a real two-image upload in headless Chrome.
 DDEV starts a dedicated Selenium service. The test uses an isolated Drupal
 installation and does not alter this site's uploaded images. See
 [the test guide](app/packages/damopen/tests/README.md) for coverage and other tests.
+
+## SNV Library and category uploads
+
+Installed locally on 10 November 2026. The existing Category vocabulary now
+contains SNV's 207 source folders/albums alongside the five original demo terms.
+The import preserves source IDs, folder/album types, parents and sibling order;
+an unchanged rerun creates or updates zero terms. No SNV media was imported.
+
+- Browse [Library](https://damopen-local.ddev.site/library).
+- Copy [category upload links](https://damopen-local.ddev.site/admin/content/category-upload-links).
+- Example: [Bangladesh upload](https://damopen-local.ddev.site/upload-image?category=24).
+- In People → Edit, administrators can set **Upload category**. Assigned users
+  may upload only into that category and its descendants. Unassigned users keep
+  existing unrestricted placement; no existing account assignments were changed.
+- Links require sign-in and existing upload permission. Both upload interfaces
+  apply the selected link category to every image; API and save-time checks
+  reject out-of-scope categories. Administrators can upload anywhere.
+
+Implementation and import instructions are in
+[the feature README](app/packages/damopen/modules/damopen_category_upload/README.md).
+The PHP changes are in `app/packages/damopen`; React source and its build are in
+`app/packages/damo-theme-upload-errors`, with the changed upload files copied to
+the installed `app/web/themes/contrib/damo_theme`. Existing installed upload-error
+handling was preserved in the source checkout and build.
+
+Validation: 8 kernel tests (235 assertions) and a browser workflow (45 assertions)
+pass. The browser test uploads two images through each interface, verifies
+categories and approval state, rejects parent/sibling URLs and a forged API
+category change, and checks read-only staff access. Existing contributed-module
+deprecations remain in the browser test output. PHP style, TypeScript build and
+lint checks pass. Tests use isolated tables and files.
+
+Pre-change database checkpoint: `pre-snv-categories-20261110`.
