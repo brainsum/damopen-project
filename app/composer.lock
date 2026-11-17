@@ -128,16 +128,16 @@
         },
         {
             "name": "brainsum/damo_theme",
-            "version": "0.11.0",
+            "version": "0.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brainsum/damo-theme.git",
-                "reference": "018e7403f65a032fa6041f9ff28df7d4f4675845"
+                "reference": "b7ea591655c0a96c5b256cadc90fd054fea6b304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brainsum/damo-theme/zipball/018e7403f65a032fa6041f9ff28df7d4f4675845",
-                "reference": "018e7403f65a032fa6041f9ff28df7d4f4675845",
+                "url": "https://api.github.com/repos/brainsum/damo-theme/zipball/b7ea591655c0a96c5b256cadc90fd054fea6b304",
+                "reference": "b7ea591655c0a96c5b256cadc90fd054fea6b304",
                 "shasum": ""
             },
             "require": {
@@ -152,9 +152,10 @@
             "description": "Theme for brainsum DAMo project.",
             "support": {
                 "issues": "https://github.com/brainsum/damo-theme/issues",
-                "source": "https://github.com/brainsum/damo-theme/tree/0.11.0"
+                "source": "https://github.com/brainsum/damo-theme/tree/0.12.0"
             },
-            "time": "2024-09-10T11:10:33+00:00"
+            "time": "2026-11-17T09:38:49+00:00",
+            "published-time": "2026-11-17T09:44:43+00:00"
         },
         {
             "name": "brainsum/damopen",
@@ -162,10 +163,10 @@
             "dist": {
                 "type": "path",
                 "url": "packages/damopen",
-                "reference": "7fedf6276d64d5a728d55d6ed92f88cbfc5e254c"
+                "reference": "ea4fc9446e2c7fce80830ed9462c6e99d745396c"
             },
             "require": {
-                "brainsum/damo_theme": ">=0.3 <1.0",
+                "brainsum/damo_theme": ">=0.12 <1.0",
                 "brainsum/media_upload": "^4.3",
                 "drupal/better_exposed_filters": "^7.0",
                 "drupal/core": "^11.3",

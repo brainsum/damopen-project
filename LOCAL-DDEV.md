@@ -14,15 +14,15 @@ Use `ddev stop` to stop it and `ddev composer` to manage dependencies in `app`.
 
 ## Repositories
 
-- The outer checkout is `brainsum/damopen-project`, branch `feature/drupal11-ddev`.
+- The outer checkout is `brainsum/damopen-project`, branch `6.0.x`.
 - `app/packages/` is not tracked here. Clone these before `ddev composer install`:
-  - `app/packages/damopen`: `brainsum/damopen`, branch
-    `feature/asset-rejection-comment` (based on `4.0.x`). Upgrade changes to
-    the distribution live here.
-  - `app/packages/damopen-extras`: `brainsum/damopen-extras`, branch
-    `feature/ai-alt-text`. `app/composer.json` applies a patch from it.
-  - Optional: `app/packages/damo-theme-upload-errors`: `brainsum/damo-theme`,
-    branch `feature/asset-rejection-comment`.
+  - `app/packages/damopen`: `brainsum/damopen`, branch `4.0.x`. Upgrade
+    changes to the distribution live here.
+  - `app/packages/damopen-extras`: `brainsum/damopen-extras`, branch `1.0.x`.
+    `app/composer.json` applies a patch from it.
+  - Optional, for theme development: `app/packages/damo-theme-upload-errors`:
+    `brainsum/damo-theme`, branch `master`. Composer installs the released
+    theme (0.12.0 or later), so this checkout is not needed to run the site.
 - Composer symlinks the DAMopen checkout to `app/web/profiles/contrib/damopen`.
   The local path repository uses `reference: config` to detect Composer metadata
   changes without requiring commits.
@@ -92,10 +92,8 @@ an unchanged rerun creates or updates zero terms. No SNV media was imported.
 
 Implementation and import instructions are in
 [the feature README](app/packages/damopen/modules/damopen_category_upload/README.md).
-The PHP changes are in `app/packages/damopen`; React source and its build are in
-`app/packages/damo-theme-upload-errors`, with the changed upload files copied to
-the installed `app/web/themes/contrib/damo_theme`. Existing installed upload-error
-handling was preserved in the source checkout and build.
+The PHP changes are in `app/packages/damopen`; the React source and its build
+are part of `brainsum/damo_theme` 0.12.0, which Composer installs.
 
 Validation: 8 kernel tests (235 assertions) and a browser workflow (45 assertions)
 pass. The browser test uploads two images through each interface, verifies
