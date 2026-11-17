@@ -17,6 +17,26 @@ This template was based on the following:
 
 ## Installation
 
+This branch runs on Drupal 11.3 or later with PHP 8.3 or later.
+
+### Required package checkouts
+
+`app/composer.json` loads the distribution from `app/packages/damopen` and applies a patch from `app/packages/damopen-extras`. Neither directory is part of this repository, so clone both before running `composer install` in `app`:
+
+```shell script
+git clone -b 4.0.x git@github.com:brainsum/damopen.git app/packages/damopen
+git clone -b 1.0.x git@github.com:brainsum/damopen-extras.git app/packages/damopen-extras
+```
+
+To enable the `damopen_extras` module, link it into the custom modules folder:
+
+```shell script
+mkdir -p app/web/modules/custom
+ln -s ../../../packages/damopen-extras app/web/modules/custom/damopen_extras
+```
+
+For a local DDEV environment see [LOCAL-DDEV.md](./LOCAL-DDEV.md). To upgrade an existing Drupal 10 site see `DRUPAL11.md` in the `brainsum/damopen` repository.
+
 Note: These commands have been tested on linux (ubuntu), they might need changes to work on other systems.
 
 ### Native composer
